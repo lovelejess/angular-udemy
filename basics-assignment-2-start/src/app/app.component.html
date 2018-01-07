@@ -5,15 +5,13 @@
   <li>Upon clicking the button, the username should be reset to an empty string</li>
 </ol>
 
-<input
+<input 
 type="text"
 class="form-control"
-[(ngModel)]="username"
->
+[(ngModel)]="username">
 
-<p>{{ username }}</p>
+<p>{{ username}}</p>
 
 <button class="btn btn-danger"
 [disabled]="!username"
-(click)="resetUsername()"
->Reset Username</button>
+(click)="resetUsername()">Reset Username</button>
