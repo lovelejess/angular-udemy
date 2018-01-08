@@ -17,11 +17,10 @@ export class AppComponent {
   }
 
   getColor() {
-    return this.clickCount == 5 ? "blue" : "white";
+    return this.clickCount > 5 ? "blue" : "white";
   }
 
-  isGreaterThanFive() {
-    return this.clickCount > 5 ? true: false
+  getFontColor() {
+    return this.clickCount > 5 ? true : false;
   }
-
 }
