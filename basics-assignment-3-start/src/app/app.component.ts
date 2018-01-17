@@ -16,11 +16,11 @@ export class AppComponent {
     this.buttonClicks.push("button clicked " + this.clickCount + " times");
   }
 
-  getColor() {
-    return this.clickCount > 5 ? "blue" : "white";
+  getColor(index: number) {
+    return index >= 4 ? "blue" : "white";
   }
 
-  getFontColor() {
-    return this.clickCount > 5 ? true : false;
+  getFontColor(index: number) {
+    return index >= 4 ? true : false;
   }
 }
