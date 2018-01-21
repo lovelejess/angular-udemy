@@ -10,10 +10,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  @Output() public childrenCrying = new EventEmitter<{cryingStatus: string}>();
+  @Output() public childrenCrying = new EventEmitter<{name: string, cryingStatus: string}>();
 
   public children: {}[] = [];
-  public names: string[] = ['child1', 'child2', 'child3', 'child4'];
   public cryingStatus: string = 'not crying';
 
   constructor() { }
@@ -24,8 +23,8 @@ export class ChildComponent implements OnInit {
   toggleChildCrying() {
     this.cryingStatus = this.cryingStatus == 'not crying' ? 'crying' : 'not crying'
     this.childrenCrying.emit({
+      name: 'lola',
       cryingStatus: this.cryingStatus
     });
   }
-
 }

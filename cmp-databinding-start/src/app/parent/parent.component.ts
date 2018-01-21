@@ -10,18 +10,19 @@ import { Component, OnInit } from '@angular/core';
 
   <h3> CryBabies </h3>
   
-  <li *ngFor="let child of childrenCryingList">{{child}}</li>
+  <li *ngFor="let child of childrenCryingList">{{ child.name }} is {{ child.cryingStatus }} !</li>
 
   `,
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  public childrenCryingList: string[] = []
+  public childrenCryingList = [];
+  
   constructor() { }
 
   ngOnInit() {
   }
-  onChildrenCrying(child: {cryingStatus: string}) {
-    this.childrenCryingList.push(child.cryingStatus);
+  onChildrenCrying(child: {name: string, cryingStatus: string}) {
+    this.childrenCryingList.push({name: child.name, cryingStatus: child.cryingStatus});
   }
 }
