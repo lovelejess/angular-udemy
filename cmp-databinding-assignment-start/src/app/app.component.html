@@ -17,4 +17,10 @@
 </div>
 
 <hr class='separator'>
-<app-game-control></app-game-control>
+<app-game-control
+  (interval)="onCounterReceived($event)">
+</app-game-control>
+
+<app-odd
+  *ngIf="isOddNumber">
+</app-odd>
