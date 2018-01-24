@@ -6,13 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public isOddNumber: boolean = false;
+  public isEvenNumber: boolean = false;
   
   onCounterReceived(int: number) {
-    this.isOddNumber = this.determineIsOdd(int);
+    this.isEvenNumber = this.determineIsEven(int);
   }
 
   determineIsOdd(int: number) {
     return int % 2 != 0;
+  }
+
+  determineIsEven(int: number) {
+    return int % 2 == 0;
   }
 }

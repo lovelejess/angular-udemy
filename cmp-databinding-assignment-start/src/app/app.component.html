@@ -22,5 +22,10 @@
 </app-game-control>
 
 <app-odd
-  *ngIf="isOddNumber">
+  *ngIf="!isEvenNumber;
+  else isEven">
 </app-odd>
+
+<ng-template #isEven>
+  <app-even></app-even>
+</ng-template>
