@@ -12,10 +12,6 @@ export class AppComponent {
     this.isEvenNumber = this.determineIsEven(int);
   }
 
-  determineIsOdd(int: number) {
-    return int % 2 != 0;
-  }
-
   determineIsEven(int: number) {
     return int % 2 == 0;
   }

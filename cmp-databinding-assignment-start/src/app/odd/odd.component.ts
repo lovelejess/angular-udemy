@@ -11,9 +11,4 @@ export class OddComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  isOdd(int: number) {
-    console.log("determining if odd");
-    return int % 2 != 0;
-  }
 }
