@@ -22,10 +22,9 @@
 </app-game-control>
 
 <app-odd
-  *ngIf="!isEvenNumber;
-  else isEven">
+  [odds]="odds">
 </app-odd>
 
-<ng-template #isEven>
-  <app-even></app-even>
-</ng-template>
+<app-even
+  [evens]="evens">
+</app-even>
