@@ -7,8 +7,8 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  @Input() public recipe: Recipe;
- 
+  @Input() public recipeElement: Recipe;
+  
   constructor() { }
 
   ngOnInit() {
