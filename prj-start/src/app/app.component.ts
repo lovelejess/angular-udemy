@@ -6,16 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public isRecipesSelected:boolean = false;
-  public isShoppingSelected:boolean = false;
+  public navigation:string = '';
 
   ngOnInit(){}
 
-  onRecipesSelected(isSelected: boolean) {
-    this.isRecipesSelected = isSelected;
-  }
-
-  onShoppingSelected(isSelected: boolean) {
-    this.isShoppingSelected = isSelected;
+  onNavigation(selectedNavigation: string) {
+    this.navigation = selectedNavigation;
   }
 }
