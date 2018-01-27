@@ -7,7 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   private isRecipeSelected: boolean = false;
+  private isShoppingSelected: boolean = false;
   @Output() recipesSelected = new EventEmitter<boolean>();
+  @Output() shoppingSelected = new EventEmitter<boolean>();
   
   constructor() { }
 
@@ -17,6 +19,11 @@ export class HeaderComponent implements OnInit {
   onRecipes() {
     this.isRecipeSelected = !this.isRecipeSelected;
     this.recipesSelected.emit(this.isRecipeSelected);
+  }
+
+  onShopping() {
+    this.isShoppingSelected = !this.isShoppingSelected;
+    this.shoppingSelected.emit(this.isShoppingSelected);
   }
 
 }

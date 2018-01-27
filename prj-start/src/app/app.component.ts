@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   public isRecipesSelected:boolean = false;
+  public isShoppingSelected:boolean = false;
 
   ngOnInit(){}
 
   onRecipesSelected(isSelected: boolean) {
-    console.log('setting!');
     this.isRecipesSelected = isSelected;
+  }
+
+  onShoppingSelected(isSelected: boolean) {
+    this.isShoppingSelected = isSelected;
   }
 }
