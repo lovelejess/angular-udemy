@@ -7,6 +7,7 @@
           <input
             type="text"
             id="name"
+            #nameInput
             class="form-control">
         </div>
         <div class="col-sm-5 form-group">
@@ -14,12 +15,14 @@
             <input
               type="text"
               id="amount"
+              #amountInput
               class="form-control">
         </div>
       </div>
       <div class="col-xs-12">
         <button
           class="btn btn-success"
+          (click)="onAddItem(nameInput, amountInput)"
           type="submit">Add</button>
         <button
           class="btn btn-danger"
