@@ -18,7 +18,7 @@ export class ShoppingEditComponent implements OnInit {
 
   public onAddItem() {
     const ingredient: Ingredient = new Ingredient(this.nameInput.nativeElement.value, this.amountInput.nativeElement.value);
-    this.shoppingListService.onAddNewIngredient.emit(ingredient);
+    this.shoppingListService.addIngredient(ingredient);
   }
 
 }
