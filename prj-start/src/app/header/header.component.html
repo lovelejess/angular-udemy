@@ -6,13 +6,11 @@
 
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li>
-          <a href="#"
-          (click)="onSelectedNavigation('recipes')">Recipes</a>
+        <li routerLinkActive="active">
+          <a routerLink="/recipes">Recipes</a>
         </li>
-        <li>
-          <a href="#"
-          (click)="onSelectedNavigation('shopping')">Shopping List</a>
+        <li routerLinkActive="active">
+          <a routerLink="/shopping-list">Shopping List</a>
         </li>
       </ul>
 
