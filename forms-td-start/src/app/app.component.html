@@ -58,6 +58,25 @@
           </textarea>
         </div>
         <p>Your reply: {{ questionAnswer }} </p>
+
+        <br>
+
+        <p>Please select your pronoun </p>
+        <div class="radio" *ngFor="let pronoun of pronouns">
+          <label>
+            <input
+              type="radio"
+              name="pronoun"
+              ng-model
+              [value]="pronoun"
+              required
+            >
+            {{ pronoun }}
+          </label>
+        </div>
+
+        <br>
+
         <button
               class="btn btn-primary"
               type="submit"
