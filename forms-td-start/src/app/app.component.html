@@ -18,7 +18,7 @@
                   required
             >
           </div>
-          <button class="btn btn-default" type="button">Suggest an Username</button>
+          <button class="btn btn-default" (click)="suggestUserName()" type="button">Suggest an Username</button>
           <div class="form-group">
             <label for="email">Mail</label>
             <input
@@ -63,7 +63,7 @@
 
         <p>Please select your pronoun </p>
         <div class="radio" *ngFor="let pronoun of pronouns">
-          <label>
+          <label for="pronoun">
             <input
               type="radio"
               name="pronoun"

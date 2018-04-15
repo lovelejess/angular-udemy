@@ -11,8 +11,14 @@ export class AppComponent {
   public defaultQuestion: String = "teacher";
   public questionAnswer: String = "";
   public pronouns: String[] = ["male", "female", "non-binary", "prefer not to say"];
+  
   public suggestUserName() {
     const suggestedName = 'Superuser';
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
   }
 
   // public onSubmit(form: NgForm) {
