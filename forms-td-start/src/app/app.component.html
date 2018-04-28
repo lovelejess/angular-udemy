@@ -44,7 +44,8 @@
                 id="secret"
                 class="form-control"
                 [ngModel]="defaultQuestion"
-                name="secret">
+                name="secret"
+                ngModel>
             <option value="pet">Your first Pet?</option>
             <option value="teacher">Your first teacher?</option>
           </select>
@@ -67,7 +68,7 @@
             <input
               type="radio"
               name="pronoun"
-              ng-model
+              ngModel
               [value]="pronoun"
               required
             >

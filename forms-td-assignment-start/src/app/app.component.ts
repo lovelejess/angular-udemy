@@ -8,10 +8,11 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   @ViewChild('subscriptionForm') subscriptionForm: NgForm;
-
+  public defaultSubscription: String = "Advanced";
   
   public onSubmit(): void {
     console.log(`form: ${this.subscriptionForm}`);
     console.log(`email: ${this.subscriptionForm.value.email}`);
+    console.log(`subscription: ${this.subscriptionForm.value.subscription}`);
   }
 }
