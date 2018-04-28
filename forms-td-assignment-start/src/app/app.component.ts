@@ -14,5 +14,6 @@ export class AppComponent {
     console.log(`form: ${this.subscriptionForm}`);
     console.log(`email: ${this.subscriptionForm.value.email}`);
     console.log(`subscription: ${this.subscriptionForm.value.subscription}`);
+    console.log(`password: ${this.subscriptionForm.value.password}`);
   }
 }
